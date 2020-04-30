@@ -7,7 +7,7 @@ Using maven, you will compile, build executable jar, deploy and start the projec
 
 You can use your prefered IDE or any text editor. To compile and upload software to Pi, use maven. From a terminal command line: mvn install.
 
-Read on Wiki [wiki](wiki), if that is what you want to do.
+Read on Wiki wiki (https://github.com/jurek1oo/RaspberryPiJavaDemo/wiki), if that is what you want to do.
 
 Good luck,
 
