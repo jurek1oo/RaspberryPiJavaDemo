@@ -1,0 +1,10 @@
+echo "Actions on Rspberry pi to install new version: ---> pidemo-@JAR.VERSION@.jar<---"
+echo "   Kill pidemo process..."
+ssh -i @LIN.KEY.PRIVATE@ pi@192.168.1.39 "@LINUX.PIDEMO.DIR@/killprocess.sh pidemo"
+echo "   Clean up old files..."
+ssh -i @LIN.KEY.PRIVATE@ pi@192.168.1.39 "@LINUX.PIDEMO.DIR@/cleanupbefore.sh"
+echo "   Copy new pidemo-@JAR.VERSION@.jar from target/ to @LINUX.PIDEMO.DIR@/dist/..."
+scp -C -i @LIN.KEY.PRIVATE@ -r @BASEDIR@/target/pidemo-@JAR.VERSION@.jar pi@192.168.1.39:@LINUX.PIDEMO.DIR@/dist/pidemo-@JAR.VERSION@.jar
+echo "   Start new pidemo..."
+ssh -i @LIN.KEY.PRIVATE@ pi@192.168.1.39 "@LINUX.PIDEMO.DIR@/startpidemo.sh @JAR.VERSION@"
+echo "PiDemo update of @JAR.VERSION@ Done."

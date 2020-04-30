@@ -1,0 +1,12 @@
+.DS_Store
+*.iml
+*.iws
+*.ipr
+.idea/
+target/
+*.log
+*.log.*
+*.jar
+build.properties
+/pc2pi_linux.sh
+/pc2pi_win.ps1
