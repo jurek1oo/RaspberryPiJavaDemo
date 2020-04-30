@@ -1,4 +1,5 @@
-pidemo is Raspberry pi 3 java development project.
+# pidemo is Raspberry pi 3 java development project under GNU gpl-2.0 licence
+--- https://opensource.org/licenses/gpl-2.0.php
 
 You will be able to write your Java code on your laptop PC using your favorite IDE.
 Using maven, you will compile, build executable jar, deploy and start the project on Raspberry pi.
@@ -104,8 +105,8 @@ Inside pidemo/log:
 /home/pi/pidemo/log/pidemo.log
 --------------------------------------------------------
 
-Good Luck
+Good luck,
 
-Jurek Kurianski Phuket Thailand 2020 April.
+Jurek Kurianski jurek@inventionsource.com.au, Phuket Thailand, April 2020.
 
-jurek@inventionsource.com.au
+This code is avaiable under GNU GPL 2 licence.
