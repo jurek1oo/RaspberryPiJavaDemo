@@ -3,15 +3,16 @@
 
 You will be able to write your Java code on your laptop PC using your favorite IDE.
 
-Using maven, you will compile, build executable jar, deploy and start the project on Raspberry pi.
+Using maven, you will compile, build executable jar, deploy and start the program on Raspberry pi.
 
-You can use your prefered IDE or any text editor. To compile and upload software to Pi, use maven. 
+To write Java coe, you can use your prefered IDE or any text editor. To compile and upload software to Pi, use maven. 
 
-From the terminal command line: mvn install.
+From the terminal command line: 
+$> mvn install.
 
-Read on priject Wiki (https://github.com/jurek1oo/RaspberryPiJavaDemo/wiki), if that is what you want to do.
+Read on project Wiki (https://github.com/jurek1oo/RaspberryPiJavaDemo/wiki), if that is what you want to do.
 
-Download the project (zip file or clone using git) to your local PC. And start with wiki System Setup instructions.
+Download the project (zip file or clone it using git) to your local PC. And start with wiki System Setup instructions.
 
 Good luck,
 
