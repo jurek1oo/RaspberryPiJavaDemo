@@ -1,6 +1,5 @@
 # Copy build.properties.example to build.properties file
 # and change the properties values to that of your system.
 win.key.private=C:\PuTTY\id_rsa_jurek.ppk
-win.key.passphrase=password
-win.hostkey="ssh-ed25519 256 ab:ae:49:38:40:4c:fa:30:fd:32:12:10:f5:41:70:50"
-lin.key.private=/media/veracrypt14579/id_rsa_jurek
+lin.key.private=/media/veracrypt1/id_rsa_hp_jurek
+linux.pidemo.dir=/home/pi/pidemo
