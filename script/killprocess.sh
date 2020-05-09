@@ -5,7 +5,6 @@ then
 else
   process_name=$1
 fi
-
 if ps -ef | grep -v grep | grep -v killprocess.sh | grep $process_name
 then
    ps -ef | grep -v grep | grep -v killprocess.sh | grep $process_name  | awk '{print $2}' | xargs kill -9 $2 ;
