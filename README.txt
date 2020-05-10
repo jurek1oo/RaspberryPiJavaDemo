@@ -1,18 +1,20 @@
 # pidemo is Raspberry pi 3 java development project under GNU gpl-2.0 licence
 --- https://opensource.org/licenses/gpl-2.0.php
 
-You will be able to write your Java code on your laptop PC using your favorite IDE.
+You will be able to write your Java code on your laptop PC (Win 10 or Linux) using your favorite IDE.
 
 Using maven, you will compile, build executable jar, deploy and start the program on Raspberry pi.
 
-To write Java coe, you can use your prefered IDE or any text editor. To compile and upload software to Pi, use maven. 
+Download the project (zip file or clone) to your laptop. 
 
-From the terminal command line: 
+Read project (https://github.com/jurek1oo/RaspberryPiJavaDemo/wiki) [Setup](I. Setup).
+
+Open terminal window, on your laptop, and from command line: 
+
 $> mvn install.
 
-Read on project Wiki (https://github.com/jurek1oo/RaspberryPiJavaDemo/wiki), if that is what you want to do.
+Read on the project Wiki (https://github.com/jurek1oo/RaspberryPiJavaDemo/wiki), if that is what you want to do.
 
-Download the project (zip file or clone it using git) to your local PC. And start with wiki System Setup instructions.
 
 Good luck,
 
