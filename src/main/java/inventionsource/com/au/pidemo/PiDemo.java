@@ -3,10 +3,20 @@ package inventionsource.com.au.pidemo;
 import com.pi4j.io.gpio.*;
 import com.pi4j.io.gpio.event.GpioPinDigitalStateChangeEvent;
 import com.pi4j.io.gpio.event.GpioPinListenerDigital;
+
+import java.io.IOException;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.stream.Stream;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import static org.graalvm.compiler.debug.DebugOptions.PrintGraphTarget.File;
 
 /**
  * @author jurek
@@ -15,9 +25,10 @@ public class PiDemo {
 
     private static final Logger log = LogManager.getLogger(PiDemo.class);
 
-    final static String VERSION = "1.02";
+    public static final String Version = JarVersionRead();
  /*
-  Invention Source (c) 2020    
+  Invention Source (c) 2020
+    final static String VERSION = "1.3"; 2020-05-10 timestamp added to version number build
     final static String VERSION = "1.02"; 2020-04-29 Works on win/lin start again
                                          WinScp changed to ssh Openssh agent
   final static String VERSION = "1.01"; 2020-04-26 clean up source
@@ -26,7 +37,7 @@ public class PiDemo {
 
     public static void main(String args[]) throws Exception {
 
-        log.info("Starting pidemo Version: " + VERSION + " <---------------------------");
+        log.info("Starting pidemo Version: " + Version + " <---------------------------");
 
         // create gpio controller
         final GpioController gpio = GpioFactory.getInstance();  
@@ -145,5 +156,26 @@ public class PiDemo {
             log.error("Error in toggle: " + outPin.getName()+ "  mills: "+ mills +
                             " count: " + count, e);
         }
+    }
+
+    public static String JarVersionRead(){
+        String version="";
+        try
+        {
+// /home/pi/pidemo/dist/pidemo-1.3-20200509_09_36.jar
+            String filePath =
+                    PiDemo.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+            String decodedPath = URLDecoder.decode(filePath, "UTF-8");
+            if (decodedPath!=null && decodedPath.length()>0){
+                version =decodedPath.substring(
+                        decodedPath.indexOf("pidemo-") + "pidemo-".length(),
+                        decodedPath.lastIndexOf(".jar")) ;
+            }
+        }
+        catch (Exception e)
+        {
+            log.error("Error: " + e.getMessage(),e);
+        }
+        return version;
     }
 }

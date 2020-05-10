@@ -13,7 +13,7 @@
         <timestamp>${maven.build.timestamp}</timestamp>
         <maven.build.timestamp.format>yyyyMMdd_HH_mm</maven.build.timestamp.format>
 
-        <jar.version>1.3-${timestamp}</jar.version>
+        <jar.version>1.04-${timestamp}</jar.version>
 
     </properties>
 
